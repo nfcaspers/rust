@@ -1,3 +1,5 @@
+#![allow(unused_variables)]
+#![allow(dead_code)]
 #[derive(Debug)]
 struct Rectangle {
     width: u64,

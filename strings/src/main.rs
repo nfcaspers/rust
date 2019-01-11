@@ -1,5 +1,7 @@
+#![allow(dead_code)]
+#![allow(unused_variables)]
 fn main() {
-    let mut s1 = String::new();
+    let s1 = String::new();
     let data = "2 plus 2 is 4 minus 1 is 3 -> Quick Maths!";
     let s2 = data.to_string();
     let s3 = "This is false.".to_string();

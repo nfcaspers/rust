@@ -1,8 +1,12 @@
-enum flexvector {
+#![allow(dead_code)]
+#![allow(unused_variables)]
+
+enum FlexVector {
     Int(i32),
     Float(f64),
     Str(String),
 }
+
 fn main() {
     let v1: Vec<i32> = Vec::new();
     let v2 = vec![1,2,3];
