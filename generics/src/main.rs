@@ -1,6 +1,8 @@
 #![allow(dead_code)]
+
+//only works with slices etc. of type i32
 fn largest_i32(list: &[i32]) -> i32 {
-    let mut largest = list[0]; //list already existed and had values
+    let mut largest = list[0]; //set first element of list as largest
     println!("largest is {:?}", largest);
     for &item in list.iter() {
         if item > largest {
@@ -10,8 +12,9 @@ fn largest_i32(list: &[i32]) -> i32 {
     largest 
 }
 
+//only works with slices etc. of type char
 fn largest_char(list: &[char]) -> char {
-    let mut largest = list[0]; //list already existed and had values
+    let mut largest = list[0]; //set first element of list as largest
     println!("largest is {:?}", largest);
     for &item in list.iter() {
         if item > largest {
@@ -21,8 +24,9 @@ fn largest_char(list: &[char]) -> char {
     largest 
 }
 
+//works with everything that implements Partial0rd and Copy
 fn largest_generic<T: PartialOrd + Copy >(list: &[T]) -> T {
-    let mut largest = list[0];
+    let mut largest = list[0]; //set first element of list as largest
     for &item in list.iter() {
         if item > largest {
             largest = item;
@@ -31,8 +35,9 @@ fn largest_generic<T: PartialOrd + Copy >(list: &[T]) -> T {
     largest
 } 
 
+//works with everything that implements Partial0rd and Clone
 fn largest_clone<T: PartialOrd + Clone>(list: &[T]) -> T {
-    let mut largest = list[0].clone();
+    let mut largest = list[0].clone(); //set clone of first element of list as largest
     for item in list.iter() {
         if *item > largest {
             largest = item.clone();
@@ -41,8 +46,9 @@ fn largest_clone<T: PartialOrd + Clone>(list: &[T]) -> T {
     largest 
 }
 
+//does not need copy or clone, because it only uses references
 fn largest_return_ref<T: PartialOrd>(list: &[T]) -> &T { //return ref to slice val
-    let mut largest = &list[0];
+    let mut largest = &list[0]; //set ref to first element of list as largest
     for item in list.iter() {
         if item > largest {
             largest = item;
