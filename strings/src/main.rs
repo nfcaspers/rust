@@ -11,7 +11,7 @@ fn main() {
 
     let s5 = String::from("Hello, ");
     let s6 = String::from("world!");
-    let s7 = s5 + &s6; //combine to Strings
+    let s7 = s5 + &s6; //combine two Strings
     println!("= {}", s7);
     println!("s6 is {}",s6 );
 
@@ -23,7 +23,7 @@ fn main() {
     for c in s11.chars() { //print chars of a string
         println!("{}", c);
     }
-    for c in s11.bytes() { //print byts of a string
+    for c in s11.bytes() { //print bytes of a string
         println!("{}", c);
     }
 }
