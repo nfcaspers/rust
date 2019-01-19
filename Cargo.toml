@@ -5,14 +5,14 @@ members=[
     "lib-structure",
     "enums",
     "generics",
-    "hash-maps",
     "largest-number",
     "lifetimes",
     "options",
     "panic",
     "public-private",
     "rectangles",
-    "strings",
     "traits",
-    "vector"
+    "std-data-structures/hash-maps",
+    "std-data-structures/vector",
+    "std-data-structures/strings"
 ]
