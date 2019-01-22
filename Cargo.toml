@@ -14,5 +14,6 @@ members=[
     "traits",
     "std-data-structures/hash-maps",
     "std-data-structures/vector",
-    "std-data-structures/strings"
+    "std-data-structures/strings",
+    "closures",
 ]
