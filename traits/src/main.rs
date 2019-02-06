@@ -1,10 +1,15 @@
 #![allow(dead_code)]
+
+mod trait_objects;
+
 fn main() {
     let mark = Person {name: String::from("Mark"), age: 20};
     let ray = Dog {name: String::from("Ray"), age: 5, breed: DogBreed::GoldenRetriver};
 
     println!("Info about Mark: {}", mark.info());
     println!("Info about Ray: {}", ray.info());
+
+    trait_objects::trait_object();
 }
 
 struct Person {
