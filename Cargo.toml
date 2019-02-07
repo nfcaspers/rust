@@ -16,4 +16,5 @@ members=[
     "std-data-structures/vector",
     "std-data-structures/strings",
     "closures",
+    "operators",
 ]

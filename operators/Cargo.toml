@@ -1,0 +1,6 @@
+[package]
+name = "operators"
+version = "0.1.0"
+authors = ["nfcaspers <noelcaspers04@gmail.com>"]
+
+[dependencies]
