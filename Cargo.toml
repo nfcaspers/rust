@@ -17,4 +17,10 @@ members=[
     "std-data-structures/strings",
     "closures",
     "operators",
+    "smart-pointers/box",
+    "smart-pointers/cell",
+    "smart-pointers/rc",
+    "unsafe",
+    "functional/functions",
+    "functional/map",
 ]

@@ -1,9 +1,21 @@
 [[package]]
+name = "box"
+version = "0.1.0"
+
+[[package]]
+name = "cell"
+version = "0.1.0"
+
+[[package]]
 name = "closures"
 version = "0.1.0"
 
 [[package]]
 name = "enums"
+version = "0.1.0"
+
+[[package]]
+name = "functions"
 version = "0.1.0"
 
 [[package]]
@@ -31,6 +43,10 @@ name = "lifetimes"
 version = "0.1.0"
 
 [[package]]
+name = "map"
+version = "0.1.0"
+
+[[package]]
 name = "match"
 version = "0.1.0"
 
@@ -51,6 +67,10 @@ name = "public-private"
 version = "0.1.0"
 
 [[package]]
+name = "rc"
+version = "0.1.0"
+
+[[package]]
 name = "rectangles"
 version = "0.1.0"
 
@@ -60,6 +80,10 @@ version = "0.1.0"
 
 [[package]]
 name = "traits"
+version = "0.1.0"
+
+[[package]]
+name = "unsafe"
 version = "0.1.0"
 
 [[package]]
