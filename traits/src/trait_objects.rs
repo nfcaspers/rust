@@ -5,9 +5,9 @@ pub fn trait_object() {
     //This variable can hold any type implementing trait Foo
     //Because the size of the type being hold can not be determined
     //at compile time it has to be stored on the heap through the use of a box pointer
-    let x: Box<dyn Foo> = Box::new(
-        BasicObject{ some_field: String::from("just some field") }
-    );
+    let x: Box<dyn Foo> = Box::new(BasicObject {
+        some_field: String::from("just some field"),
+    });
     x.bar();
 }
 

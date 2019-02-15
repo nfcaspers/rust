@@ -1,7 +1,7 @@
 fn main() {
-    //bind closure to f 
+    //bind closure to f
     let f = |x| x + 1;
-    let y  = 10;
+    let y = 10;
     println!("Closure: {}", f(y));
 
     //closure without arguments
@@ -32,15 +32,19 @@ fn pass_closure() {
 
     let mlt = |x| x * 5;
     let result = change(mlt, 5);
-    println!("Result of mlt is {}", result); 
+    println!("Result of mlt is {}", result);
 }
 
 fn fn1<F>(f: F)
-where F: Fn() {
+where
+    F: Fn(),
+{
     f();
 }
 
 fn change<F>(f: F, val: i32) -> i32
-where F: Fn(i32) -> i32 {
+where
+    F: Fn(i32) -> i32,
+{
     f(val)
 }

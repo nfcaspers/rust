@@ -13,17 +13,19 @@ fn main() {
     let s6 = String::from("world!");
     let s7 = s5 + &s6; //combine two Strings
     println!("= {}", s7);
-    println!("s6 is {}",s6 );
+    println!("s6 is {}", s6);
 
     let s8 = String::from("tic");
     let s9 = String::from("tac");
     let s10 = String::from("toe");
     let s11 = format!("{}-{}-{}", s8, s9, s10); //format Strings with a macro
 
-    for c in s11.chars() { //print chars of a string
+    for c in s11.chars() {
+        //print chars of a string
         println!("{}", c);
     }
-    for c in s11.bytes() { //print bytes of a string
+    for c in s11.bytes() {
+        //print bytes of a string
         println!("{}", c);
     }
 }

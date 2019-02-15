@@ -3,8 +3,15 @@
 mod trait_objects;
 
 fn main() {
-    let mark = Person {name: String::from("Mark"), age: 20};
-    let ray = Dog {name: String::from("Ray"), age: 5, breed: DogBreed::GoldenRetriver};
+    let mark = Person {
+        name: String::from("Mark"),
+        age: 20,
+    };
+    let ray = Dog {
+        name: String::from("Ray"),
+        age: 5,
+        breed: DogBreed::GoldenRetriver,
+    };
 
     println!("Info about Mark: {}", mark.info());
     println!("Info about Ray: {}", ray.info());
@@ -26,14 +33,17 @@ impl Info for Person {
 struct Dog {
     name: String,
     age: u8,
-    breed: DogBreed 
+    breed: DogBreed,
 }
 
 impl Info for Dog {
     fn info(&self) -> String {
-        String::from(format!("Name: {}, Age: {}, Breed: {}", 
-                            self.name, self.age,
-                            self.breed.breed_name_as_str()))
+        String::from(format!(
+            "Name: {}, Age: {}, Breed: {}",
+            self.name,
+            self.age,
+            self.breed.breed_name_as_str()
+        ))
     }
 }
 

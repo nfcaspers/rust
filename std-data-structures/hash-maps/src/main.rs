@@ -8,12 +8,13 @@ fn main() {
     scores.insert(String::from("Red"), 10);
     scores.insert(String::from("Blue"), 50);
 
-    let teams = vec![String::from("Red"),String::from("Blue")];
+    let teams = vec![String::from("Red"), String::from("Blue")];
     let tscores = vec![10, 50];
-    let hashscores: HashMap<_, _> = teams.iter()
-                                    .zip(tscores.iter()) //turn to iterators into one which holds tuples of values 
-                                                         //(val_from_first_iter, val_from_second_iter)
-                                    .collect(); //collect into hashmap
+    let hashscores: HashMap<_, _> = teams
+        .iter()
+        .zip(tscores.iter()) //turn to iterators into one which holds tuples of values
+        //(val_from_first_iter, val_from_second_iter)
+        .collect(); //collect into hashmap
 
     let _name = String::from("Blue");
     let _get_score = hashscores.get(&_name); //get score-value of blue team
@@ -24,19 +25,20 @@ fn main() {
         println!("{} : {}", key, val);
     }
 
-    let  mut new_scores = HashMap::new();
+    let mut new_scores = HashMap::new();
     new_scores.insert(String::from("Red"), 10);
     new_scores.insert(String::from("Blue"), 50);
 
     new_scores.insert(String::from("Blue"), 25); //override key "Blue"
 
-    { //only insert value if key doesnt exist
+    {
+        //only insert value if key doesnt exist
         let mut scores = HashMap::new();
         scores.insert(String::from("Blue"), 10);
-        
+
         scores.entry(String::from("Yellow")).or_insert(50);
         scores.entry(String::from("Blue")).or_insert(50);
-        
+
         println!("{:?}", scores);
     }
 }
