@@ -7,7 +7,6 @@ fn main() {
     drop(owner);
     //if assert is true the Value has been dropped
     assert!(weakref._ref.upgrade().is_none());
-
 }
 
 #[derive(Debug)]
@@ -17,9 +16,7 @@ struct Owner {
 
 impl Owner {
     fn new() -> Owner {
-        Owner {
-            owned: Rc::new(10),
-        }
+        Owner { owned: Rc::new(10) }
     }
 }
 
@@ -31,7 +28,7 @@ struct WeakRef {
 impl WeakRef {
     fn new(value_owner: &Owner) -> WeakRef {
         WeakRef {
-            _ref: Rc::downgrade(&value_owner.owned)
+            _ref: Rc::downgrade(&value_owner.owned),
         }
     }
 }
