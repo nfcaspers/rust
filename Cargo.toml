@@ -8,7 +8,7 @@ members=[
     "largest-number",
     "lifetimes",
     "options",
-    "panic",
+    "error",
     "public-private",
     "rectangles",
     "traits",
