@@ -1,10 +1,10 @@
-//implement own error-type
+//implement own error type
 
 use std::error;
 use std::fmt;
 
 #[derive(Debug)]
-enum BarError {
+pub enum BarError {
     Err1,
     Err2,
     Err3(BarErrorInfo),
@@ -17,7 +17,7 @@ impl fmt::Display for BarError {
 }
 
 #[derive(Debug)]
-struct BarErrorInfo {
+pub struct BarErrorInfo {
     info: String,
 }
 

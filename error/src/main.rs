@@ -41,3 +41,12 @@ fn main() -> Result<(), FooError> {
 
     Ok(())
 }
+
+
+//anything that implements error::Error and fmt::Display
+//can be handled with Result<(), Box<std::error::Error>>
+//trough trait objects
+fn handle_all_errors() -> Result<(), Box<std::error::Error>> {
+    let x: Result<(), err::BarError> = Result::Err(err::BarError::Err1)?;
+    Ok(())
+}
